@@ -1,10 +1,10 @@
-import * as angular from 'angular';
 import { Component, NgModule, NgZone } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 import { UpgradeModule } from '@angular/upgrade/static';
-import { BrowserModule } from '@angular/platform-browser';
-import { UIRouterUpgradeModule, NgHybridStateDeclaration } from '@uirouter/angular-hybrid';
+import { NgHybridStateDeclaration, UIRouterUpgradeModule } from '@uirouter/angular-hybrid';
 import { UrlService } from '@uirouter/core';
+import * as angular from 'angular';
 
 const app = angular.module('minimal', ['ui.router.upgrade']);
 
@@ -94,7 +94,6 @@ const nestedState: NgHybridStateDeclaration = {
     UIRouterUpgradeModule.forRoot({ states: [nestedState] }),
   ],
   declarations: [Ng2Component],
-  entryComponents: [Ng2Component],
 })
 export class RootModule {
   constructor(private upgrade: UpgradeModule) {}

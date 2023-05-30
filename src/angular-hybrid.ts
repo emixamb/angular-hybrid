@@ -1,32 +1,32 @@
 import { Component, ElementRef, Inject, Injector, Input, ModuleWithProviders, NgModule } from '@angular/core';
-import { downgradeComponent, UpgradeModule, getAngularJSGlobal, getAngularLib } from '@angular/upgrade/static';
+import { UpgradeModule, downgradeComponent, getAngularJSGlobal, getAngularLib } from '@angular/upgrade/static';
 
 import {
-  StateObject,
-  forEach,
   PathNode,
   Resolvable,
+  StateObject,
   StateRegistry,
   UIRouter,
   ViewConfig,
   ViewService,
+  forEach,
 } from '@uirouter/core';
 
 import {
-  applyModuleConfig,
   NATIVE_INJECTOR_TOKEN,
-  ng2LazyLoadBuilder,
   Ng2ViewConfig,
-  UIView,
-  _UIROUTER_SERVICE_PROVIDERS,
   Ng2ViewDeclaration,
   ParentUIViewInject,
   StatesModule,
   UIROUTER_MODULE_TOKEN,
   UIROUTER_ROOT_MODULE,
   UIRouterModule,
+  UIView,
+  _UIROUTER_SERVICE_PROVIDERS,
+  applyModuleConfig,
   makeChildProviders,
-} from '@uirouter/angular';
+  ng2LazyLoadBuilder,
+} from '@emapp/angular';
 
 import { $InjectorLike, Ng1ViewConfig } from '@uirouter/angularjs';
 
@@ -202,7 +202,6 @@ export function getParentUIViewInject(r: StateRegistry): ParentUIViewInject {
 
     ..._UIROUTER_SERVICE_PROVIDERS,
   ],
-  entryComponents: [UIViewNgUpgrade],
   exports: [UIViewNgUpgrade, UIRouterModule],
 })
 export class UIRouterUpgradeModule {
