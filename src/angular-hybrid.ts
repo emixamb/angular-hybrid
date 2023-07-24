@@ -26,7 +26,7 @@ import {
   applyModuleConfig,
   makeChildProviders,
   ng2LazyLoadBuilder,
-} from '@emapp/angular';
+} from '@uirouter/angular';
 
 import { $InjectorLike, Ng1ViewConfig } from '@uirouter/angularjs';
 

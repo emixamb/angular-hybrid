@@ -1,4 +1,4 @@
-import { Ng2StateDeclaration, StatesModule } from '@emapp/angular';
+import { Ng2StateDeclaration, StatesModule } from '@uirouter/angular';
 import { Ng1StateDeclaration, Ng1StateTransitionHook } from '@uirouter/angularjs';
 import { StateProvider } from '@uirouter/angularjs/lib/stateProvider';
 import { IInjectable } from '@uirouter/core';
